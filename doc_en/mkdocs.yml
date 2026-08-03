@@ -1,0 +1,108 @@
+site_name: Magenta Realtime 2 Plugin for UE Manual
+site_url: https://Akiya-Research-Institute.github.io/MagentaRealtime2Plugin-Manual/
+site_author: Kenji Asaba
+site_description: Official documentation for the Magenta Realtime 2 Plugin for Unreal Engine, which allows real-time, interactive music generation within Unreal Engine 5 using Magenta Realtime 2.
+copyright: Copyright &copy; 2026 Akiya Research Institute, Inc. All Rights Reserved
+
+site_dir: ../docs/en
+
+extra_css:
+  - stylesheets/extra.css
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
+    - scheme: slate 
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode
+    - media: "(prefers-color-scheme: light)" 
+      scheme: default
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)" 
+      scheme: slate
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode
+  font:
+    text: M PLUS 1
+    code: M PLUS 1 Code
+  language: en
+  favicon: images/favicon.png
+  logo: images/favicon.png
+  features:
+    - navigation.instant
+    - navigation.tracking    
+    # - navigation.tabs
+    - navigation.sections
+    # - navigation.expand
+    # - navigation.indexes
+    - toc.integrate
+    - search.suggest
+    - search.highlight
+    - search.share
+    - header.autohide
+    
+extra:
+  alternate:
+    - name: English
+      link: /MagentaRealtime2Plugin-Manual/en/ 
+      lang: en
+    - name: 日本語
+      link: /MagentaRealtime2Plugin-Manual/ja/
+      lang: ja
+  analytics:
+    provider: google
+    property: UA-2709176-10
+  social:
+    - icon: material/home
+      link: https://vrlab.akiya-souken.co.jp/
+    - icon: fontawesome/brands/youtube 
+      link: https://www.youtube.com/channel/UC7t4amWNvquSy_ODcGZ4R0g
+    - icon: fontawesome/brands/twitter 
+      link: https://x.com/Akiya_Souken_VR
+    - icon: fontawesome/brands/github 
+      link: https://github.com/Akiya-Research-Institute
+    - icon: material/store
+      link: https://www.fab.com/sellers/Akiya%20Research%20Institute
+  # generator: false
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true 
+  - pymdownx.details
+  - footnotes
+  - pymdownx.tilde
+  
+nav:
+  - Plugin:
+    - index.md
+    - system-requirement.md
+    - install.md
+    - quickstart.md
+    - How to Use:
+      - Prompt Input:
+        - prompt.md
+        - weight.md
+      - midi.md
+      - other.md
+      - state.md
+      - performance.md
+      - package.md
+    - faq.md
+    - changelog.md
+  - Demo Project:
+    - demo.md
